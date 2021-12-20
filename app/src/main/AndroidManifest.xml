@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
         <activity
+            android:name=".cheif_login"
+            android:exported="false" />
+        <activity
+            android:name=".customer_login"
+            android:exported="false" />
+        <activity
             android:name=".ChefRegistration"
             android:exported="false" />
         <activity

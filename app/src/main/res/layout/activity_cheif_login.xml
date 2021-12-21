@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
-        android:layout_width="316dp"
-        android:layout_height="46dp"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="USERNAME"
@@ -21,16 +21,19 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="313dp"
-        android:layout_height="59dp"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="PASSWORD"
+        android:hint="Enter your password"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.374"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249"
-        tools:layout_editor_absoluteX="47dp" />
+        app:layout_constraintVertical_bias="0.168" />
 
     <Button
         android:id="@+id/button4"

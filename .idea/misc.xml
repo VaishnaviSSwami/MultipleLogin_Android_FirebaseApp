@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_browse_gallery_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_contact_mail_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_start_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_chef_registration.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_cheif_login.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_login.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_registration.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_home.xml" value="0.128" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_splash_screen.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/headerfile.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Samvid/Desktop/Food-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable/ic_baseline_browse_gallery_24.xml" value="0.26614583333333336" />

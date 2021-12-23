@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/chef"
+            android:icon="@drawable/ic_baseline_fastfood_24"
+            android:title="Chef" />
+
+        <item
+            android:id="@+id/customer"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Customer" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_baseline_contact_mail_24"
+            android:title="About" />
+
+        <item
+            android:id="@+id/gallery"
+            android:icon="@drawable/ic_baseline_browse_gallery_24"
+            android:title="Gallery" />
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Share" />
+
+
+    </group>
+
+
 </menu>

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods" >
         <activity
-            android:name=".gallary"
+            android:name=".gallery"
             android:exported="false" />
         <activity
             android:name=".contact_us"

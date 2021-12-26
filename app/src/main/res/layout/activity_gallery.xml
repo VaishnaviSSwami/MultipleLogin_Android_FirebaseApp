@@ -45,7 +45,7 @@
             android:id="@+id/textView6"
             android:layout_width="245dp"
             android:layout_height="34dp"
-            android:text="DERVING HUMANITY SINCR 2014"
+            android:text="SERVING HUMANITY SINCR 2014"
             android:textColor="#0EB314"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"

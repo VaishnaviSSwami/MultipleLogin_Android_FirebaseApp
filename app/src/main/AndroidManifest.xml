@@ -29,9 +29,6 @@
             android:name=".about_us"
             android:exported="false" />
         <activity
-            android:name=".home"
-            android:exported="false" />
-        <activity
             android:name=".cheif_login"
             android:exported="false" />
         <activity

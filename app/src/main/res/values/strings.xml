@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Foods</string>
+    <string name="home_image_str_res">Home Image</string>
+    <string name="get_started_str_res">Get Started</string>
+    <string name="todo_str_res">TODO</string>
+    <string name="gallery_str_res">Gallery</string>
+    <string name="chef_str_res">Chef</string>
+    <string name="customer_str_res">Customer</string>
+    <string name="about_str_res">About</string>
+    <string name="contact_us_str_res">Contact Us</string>
+    <string name="share_str_res">Share</string>
 </resources>

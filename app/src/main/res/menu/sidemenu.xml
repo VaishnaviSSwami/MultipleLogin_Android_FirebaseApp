@@ -5,26 +5,26 @@
         <item
             android:id="@+id/chef"
             android:icon="@drawable/ic_baseline_fastfood_24"
-            android:title="Chef" />
+            android:title="@string/chef_str_res" />
 
         <item
             android:id="@+id/customer"
             android:icon="@drawable/ic_baseline_person_24"
-            android:title="Customer" />
+            android:title="@string/customer_str_res" />
 
         <item
             android:id="@+id/about"
             android:icon="@drawable/ic_baseline_contact_mail_24"
-            android:title="About" />
+            android:title="@string/about_str_res" />
         <item
             android:id="@+id/contact_us"
             android:icon="@drawable/ic_baseline_browse_gallery_24"
-            android:title="Contact Us" />
+            android:title="@string/contact_us_str_res" />
 
         <item
             android:id="@+id/gallery"
             android:icon="@drawable/ic_baseline_photo_library_24"
-            android:title="Gallery" />
+            android:title="@string/gallery_str_res" />
 
 
     </group>
@@ -33,7 +33,7 @@
         <item
             android:id="@+id/share"
             android:icon="@drawable/ic_baseline_share_24"
-            android:title="Share" />
+            android:title="@string/share_str_res" />
 
 
     </group>

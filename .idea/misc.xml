@@ -3,46 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/drawable/ic_baseline_browse_gallery_24.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_about_us.xml" value="0.245018115942029" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_chef_registration.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_cheif_login.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_login.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_registration.xml" value="0.22644927536231885" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_gallary.xml" value="0.264" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_gallery.xml" value="0.264" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_splash_screen.xml" value="0.245018115942029" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/headerfile.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/Samvid/Desktop/Food-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_about_us.xml" value="0.264" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_chef_registration.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_cheif_login.xml" value="0.25" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_contact_us.xml" value="0.25" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_customer_registration.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_gallery.xml" value="0.4" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/headerfile.xml" value="0.25" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/menu/Sidebar.xml" value="0.1" />
-        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/menu/sidemenu.xml" value="0.25" />
+        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Vaishnavi/Desktop/Belli_Food_App/app/src/main/res/layout/activity_main.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/Vaishnavi/Desktop/Food-App/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/drawable/background_gradient.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_about_us.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_chef_registration.xml" value="0.264" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_cheif_login.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_contact_us.xml" value="0.264" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_customer_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_customer_registration.xml" value="0.264" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_gallery.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_home.xml" value="0.2" />
-        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.128" />
         <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/activity_splash_screen.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/menu/sidemenu.xml" value="0.4" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/layout/headerfile.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Vaishnavi/Desktop/khanakhajana/app/src/main/res/menu/sidemenu.xml" value="0.17475728155339806" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

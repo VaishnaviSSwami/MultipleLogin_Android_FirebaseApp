@@ -15,7 +15,7 @@
         android:layout_marginEnd="33dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="USERNAME"
+        android:text="Enter Your Mail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,19 +29,20 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
-        android:inputType="textPassword"
+        android:hint="Password"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.301"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:text="PASSWORD" />
+         />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_login"
+        android:layout_width="118dp"
+        android:layout_height="66dp"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,9 +61,9 @@
         app:layout_constraintVertical_bias="0.628" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_reg"
+        android:layout_width="136dp"
+        android:layout_height="62dp"
         android:text="SIGN UP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

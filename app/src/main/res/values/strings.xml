@@ -9,4 +9,6 @@
     <string name="about_str_res">About</string>
     <string name="contact_us_str_res">Contact Us</string>
     <string name="share_str_res">Share</string>
+    <string name="navigation_open" />
+    <string name="navigation_close" />
 </resources>

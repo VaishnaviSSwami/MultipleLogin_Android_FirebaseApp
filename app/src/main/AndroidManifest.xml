@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
         <activity
+            android:name=".Share_Apps"
+            android:exported="false" />
+        <activity
+            android:name=".Chef_Login"
+            android:exported="false" />
+        <activity
             android:name=".Splash_Screen"
             android:exported="true">
             <intent-filter>
@@ -18,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".gallery"
             android:exported="false" />
@@ -38,10 +43,7 @@
             android:name=".ChefRegistration"
             android:exported="false" />
         <activity android:name=".CustomerRegistration" />
-        <activity
-            android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

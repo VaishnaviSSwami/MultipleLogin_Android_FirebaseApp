@@ -12,18 +12,9 @@
     tools:openDrawer="start"
     >
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/navigation_view"
-        app:headerLayout="@layout/headerfile"
-        app:menu="@menu/sidemenu"
-        android:layout_gravity="start"
-        />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+
+
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,19 +22,7 @@
             android:layout_height="wrap_content">
 
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.024"
-                app:title="ToolBar"
-                app:titleTextColor="#512DA8">
 
-            </androidx.appcompat.widget.Toolbar>
 
             <ImageView
                 android:id="@+id/imageView"
@@ -58,7 +37,16 @@
                 app:layout_constraintVertical_bias="0.06"
                 app:srcCompat="@drawable/homeimg" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
+        app:headerLayout="@layout/headerfile"
+        app:menu="@menu/sidemenu"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        />
 
-    </ScrollView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

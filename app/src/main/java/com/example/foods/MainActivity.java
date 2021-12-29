@@ -3,92 +3,81 @@ package com.example.foods;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
-
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
-
+    DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ActionBarDrawerToggle toggle;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DrawerLayout drawerLayout = findViewById(R.id.drawer);
-        navigationView=findViewById(R.id.navigation_view);
-
-
-
-
-        ActionBarDrawerToggle toggle;
-        toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.navigation_open,R.string.navigation_close);
-
+        drawerLayout = findViewById(R.id.drawer);
+        navigationView = findViewById(R.id.navigation_view);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_open, R.string.navigation_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        setSupportActionBar(toolbar);
-    }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.chef:
+                        Log.i("Menu_drawer", "Chef is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
+                    case R.id.customer:
+                        Log.i("Menu_drawer", "Customer is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.about:
+                        Log.i("Menu_drawer", "About is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.contact_us:
+                        Log.i("Menu_drawer", "Contact_us is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.gallery:
+                        Log.i("Menu_drawer", "Gallery is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.share:
+                        Log.i("Menu_drawer", "Share is selected ");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.sidemenu,menu);
-        return true;
-    }
+                }
+                return true;
+            }
+        });
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if(id==R.id.share)
-        {
-            ApplicationInfo applicationInfo=getApplicationContext().getApplicationInfo();
-            String apkpath=applicationInfo.sourceDir;
-            Intent i=new Intent(Intent.ACTION_SEND);
-            i.setType("application/vnd.android.pacakge-archieve");
-            i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkpath)));
-            startActivity(Intent.createChooser(i,"Share Via"));
-
-        }
-        else if (id==R.id.about)
-        {
-            Intent intent=new Intent(MainActivity.this,about_us.class);
-            startActivity(intent);
-        }
-        else if (id==R.id.gallery)
-        {
-            Intent intent=new Intent(MainActivity.this,gallery.class);
-            startActivity(intent);
-        }
-        else if (id==R.id.chef)
-        {
-            Intent intent=new Intent(MainActivity.this,cheif_login.class);
-            startActivity(intent);
-        }
-        else if (id==R.id.customer)
-        {
-            Intent intent=new Intent(MainActivity.this,customer_login.class);
-            startActivity(intent);
-        }
-        else if (id==R.id.contact_us)
-        {
-            Intent intent=new Intent(MainActivity.this,contact_us.class);
-            startActivity(intent);
-        }
-        return true;
-    }
-
-    public void setContentView(int activity_home) {
     }
 }
+

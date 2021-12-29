@@ -25,11 +25,6 @@
             android:id="@+id/gallery"
             android:icon="@drawable/ic_baseline_photo_library_24"
             android:title="@string/gallery_str_res" />
-
-
-    </group>
-
-    <group android:checkableBehavior="single">
         <item
             android:id="@+id/share"
             android:icon="@drawable/ic_baseline_share_24"

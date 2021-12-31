@@ -83,8 +83,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.share:
                         Log.i("Menu_drawer", "Share is selected ");
-                        Intent intent5=new Intent(MainActivity.this,Share_Apps.class);
-                        startActivity(intent5);
+                        Intent intent5=new Intent(Intent.ACTION_SEND);
+                        intent5.setType("text/plain");
+                        String Body=" Download this app";
+                        String sub="http://googleplaystore/bellifood";
+                        intent5.putExtra(Intent.EXTRA_TEXT,Body);
+                        intent5.putExtra(Intent.EXTRA_TEXT,sub);
+
+                        startActivity(Intent.createChooser(intent5,"share using"));
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

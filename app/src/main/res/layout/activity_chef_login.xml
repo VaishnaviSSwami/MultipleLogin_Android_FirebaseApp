@@ -13,17 +13,37 @@
         android:layout_height="53dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="33dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="NIC CODE"
         android:background="@drawable/button_custom"
-        android:textColorHint="@color/white"
+        android:ems="10"
         android:gravity="center"
+        android:hint="Enter Your Mail Id"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.252" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="346dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/button_custom"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Your Restuarnt Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -31,16 +51,17 @@
         android:layout_height="53dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="33dp"
-        android:ems="10"
-        android:hint="Password"
-        android:gravity="center"
         android:background="@drawable/button_custom"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301"
+        app:layout_constraintVertical_bias="0.378"
         tools:ignore="SpeakableTextPresentCheck"
         tools:text="PASSWORD" />
 
@@ -49,13 +70,15 @@
         android:layout_width="166dp"
         android:layout_height="57dp"
         android:background="@drawable/button_custom"
+        android:gravity="center"
         android:text="LOGIN"
         android:textColor="@color/black"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532" />
 
     <TextView
         android:id="@+id/textView"
@@ -74,12 +97,13 @@
         android:layout_width="166dp"
         android:layout_height="57dp"
         android:background="@drawable/button_custom"
+        android:gravity="center"
         android:text="SIGN UP"
         android:textColor="@color/black"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.752" />
 </androidx.constraintlayout.widget.ConstraintLayout>

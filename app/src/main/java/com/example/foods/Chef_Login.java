@@ -22,9 +22,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class Chef_Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser user;
-    TextView tv_msg;
+    TextView tv_forget;
     EditText et_email,et_pass;
-    Button btn_signup,btn_signin;
+    Button btn_signin,btn_reg;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,29 +52,34 @@ public class Chef_Login extends AppCompatActivity {
         tv_forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et_email=findViewById(R.id.et_email);
+                et_email=findViewById(R.id.et_chef_mail);
                 String email;
                 email=et_email.getText().toString();
                 shareDetails(email);
                 sendForgotPassLink(email);
             }
-        });
 
-        btn_signup=findViewById(R.id.btn_signup);
-        btn_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this, SignUp.class);
-                startActivity(i);
+            private void sendForgotPassLink(String email) {
+                if (!TextUtils.isEmpty(email)) {
+                    mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(getApplicationContext(), "Reset Password Link Sent to: "+email, Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+                else {
+                    et_email.setError("Required Field");
+                }
             }
         });
 
-        btn_signin=findViewById(R.id.btn_signin);
+        btn_signin=findViewById(R.id.btn_login);
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et_email=findViewById(R.id.et_email);
-                et_pass=findViewById(R.id.et_pass);
+                et_email=findViewById(R.id.et_chef_mail);
+                et_pass=findViewById(R.id.et_chef_pass);
                 String email,pass;
                 email=et_email.getText().toString();
                 pass=et_pass.getText().toString();
@@ -91,10 +96,10 @@ public class Chef_Login extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this, Home.class);
+                        Intent intent = new Intent(Chef_Login.this, Chef_Dashboard.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Chef_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

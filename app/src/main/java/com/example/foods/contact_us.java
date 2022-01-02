@@ -23,7 +23,7 @@ public class contact_us extends AppCompatActivity {
         Element adsElement = new Element();
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setDescription(" Add descrition about your app")
+                .setDescription(" The Belli Food App Project")
                 .addItem(new Element().setTitle("Version 1.0"))
                 .addGroup("CONNECT WITH US!")
                 .addEmail(" hfhofficial@gmail.com ")

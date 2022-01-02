@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
         <activity
+            android:name=".chef_add_menu"
+            android:exported="false" />
+        <activity
             android:name=".Chef_Dashboard"
             android:exported="false" />
         <activity

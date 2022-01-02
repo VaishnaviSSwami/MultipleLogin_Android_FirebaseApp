@@ -95,7 +95,7 @@
     <Button
         android:id="@+id/btn_ADD_MENU_add_photo"
         android:layout_width="139dp"
-        android:layout_height="32dp"
+        android:layout_height="39dp"
         android:background="@drawable/button_custom"
         android:gravity="center"
         android:text="ADD PHOTO"

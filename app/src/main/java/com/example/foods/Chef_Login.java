@@ -98,6 +98,7 @@ public class Chef_Login extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(Chef_Login.this, Chef_Dashboard.class);
                         startActivity(intent);
+
                     } else {
                         Toast.makeText(Chef_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
                     }

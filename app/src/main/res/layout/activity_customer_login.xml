@@ -45,16 +45,18 @@
 
     <Button
         android:id="@+id/btn_login2"
-        android:layout_width="166dp"
-        android:layout_height="57dp"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
         android:background="@drawable/button_custom"
-        android:text="LOGIN"
         android:gravity="center"
+        android:text="LOGIN"
         android:textColor="#121213"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
 
     <TextView
         android:id="@+id/pass_forget"
@@ -68,20 +70,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <Button
         android:id="@+id/btn_reg2"
-        android:text="SIGN UP"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:backgroundTint="@color/about_description_dark_text_color"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:background="@drawable/button_custom"
+        android:backgroundTint="@color/about_description_dark_text_color"
+        android:gravity="center"
+        android:text="SIGN UP"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.562" />
 </androidx.constraintlayout.widget.ConstraintLayout>

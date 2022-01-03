@@ -120,10 +120,8 @@ public class chef_add_menu extends AppCompatActivity {
                 break;
             case 2:
                 if(requestCode == RESULT_OK){
-                 Bundle bundle;
-                    bundle = data.getExtras();
-                    Bitmap bitmapImage = (Bitmap) bundle.get("data");
-                    food_image.setImageBitmap(bitmapImage);
+                 Bitmap Image = (Bitmap) data.getExtras().get("data");
+                    food_image.setImageBitmap(Image);
                 }
                 break;
         }

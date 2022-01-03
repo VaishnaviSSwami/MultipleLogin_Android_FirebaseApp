@@ -52,7 +52,7 @@ public class CustomerRegistration <FirebaseUser> extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(CustomerRegistration.this, Chef_Login.class);
+                                Intent intent = new Intent(CustomerRegistration.this, customer_dashboard.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(CustomerRegistration.this, "Registration Unsuccessful", Toast.LENGTH_LONG).show();

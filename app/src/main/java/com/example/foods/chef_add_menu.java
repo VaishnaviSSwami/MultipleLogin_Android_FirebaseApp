@@ -79,12 +79,11 @@ public class chef_add_menu extends AppCompatActivity {
         imageView_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(checkAndRequestPermission()){
+                if(checkAndRequestPermission()) {
 
+                    takePictureFromCamera();
+                    alertDialogProfilePicture.cancel();
                 }
-                takePictureFromCamera();
-                alertDialogProfilePicture.cancel();
-
             }
         });
 
@@ -103,7 +102,7 @@ public class chef_add_menu extends AppCompatActivity {
     }
     private void takePictureFromCamera(){
         Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if(takePicture.resolveActivity(getPackageManager())!=null){
+        if(takePicture.resolveActivity(getPackageManager())!= null){
             startActivityForResult(takePicture,2);
         }
     }
@@ -120,8 +119,9 @@ public class chef_add_menu extends AppCompatActivity {
                 }
                 break;
             case 2:
-                if(requestCode ==RESULT_OK){
-                 Bundle bundle   = data.getExtras();
+                if(requestCode == RESULT_OK){
+                 Bundle bundle;
+                    bundle = data.getExtras();
                     Bitmap bitmapImage = (Bitmap) bundle.get("data");
                     food_image.setImageBitmap(bitmapImage);
                 }

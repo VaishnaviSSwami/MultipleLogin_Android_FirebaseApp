@@ -73,7 +73,7 @@ public class chef_add_menu extends AppCompatActivity {
         ImageView imageView_camera =dialogView.findViewById(R.id.imageView_camera);
         ImageView imageView_gallery = dialogView.findViewById(R.id.imageView_gallery);
 
-        AlertDialog alertDialogProfilePicture = builder.create();
+        final AlertDialog alertDialogProfilePicture = builder.create();
         alertDialogProfilePicture.show();
 
         imageView_camera.setOnClickListener(new View.OnClickListener() {

@@ -13,14 +13,24 @@ public class Chef_Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_dashboard);
-        Button btn_reg;
-        btn_reg=findViewById(R.id.btn_ADD_MENU);
-        btn_reg.setOnClickListener(new View.OnClickListener() {
+        Button btn_ADD_MENU;
+        btn_ADD_MENU=findViewById(R.id.btn_ADD_MENU);
+        btn_ADD_MENU.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(Chef_Dashboard.this,chef_add_menu.class);
                 startActivity(i);
             }
         });
+        Button btn_VIEW_MENU;
+        btn_VIEW_MENU=findViewById(R.id.btn_VIEW_MENU);
+        btn_VIEW_MENU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Chef_Dashboard.this, chef_view_menu.class);
+                startActivity(i);
+            }
+        });
     }
+
 }

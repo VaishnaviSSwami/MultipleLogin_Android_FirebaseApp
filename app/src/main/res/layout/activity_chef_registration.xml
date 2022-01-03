@@ -12,7 +12,7 @@
         android:layout_width="346dp"
         android:layout_height="53dp"
         android:ems="10"
-        android:hint="Enter Restuarnt Your Name"
+        android:hint="Enter Restaurant Your Name"
         android:background="@drawable/button_custom"
         android:gravity="center"
         android:textColorHint="@color/white"

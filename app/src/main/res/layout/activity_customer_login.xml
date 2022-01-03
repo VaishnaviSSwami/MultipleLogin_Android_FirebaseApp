@@ -8,7 +8,7 @@
     tools:context=".customer_login">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/mail_customer"
         android:layout_width="346dp"
         android:layout_height="53dp"
         android:gravity="center"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.132" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/pass_customer"
         android:layout_width="346dp"
         android:layout_height="53dp"
         android:layout_marginStart="32dp"
@@ -44,7 +44,7 @@
          />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_login2"
         android:layout_width="166dp"
         android:layout_height="57dp"
         android:background="@drawable/button_custom"
@@ -57,26 +57,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NEW? SIGN UP!!"
+        android:id="@+id/pass_forget"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="Forget Password??click here!!"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.669" />
 
     <Button
-        android:id="@+id/btn_reg"
-
+        android:id="@+id/btn_reg2"
         android:text="SIGN UP"
         android:textColor="@color/black"
         android:gravity="center"
         android:backgroundTint="@color/about_description_dark_text_color"
-        android:layout_width="166dp"
-        android:layout_height="57dp"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
         android:background="@drawable/button_custom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

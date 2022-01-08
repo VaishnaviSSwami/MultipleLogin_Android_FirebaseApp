@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
-       
+
         <activity
             android:name=".chef_view_menu"
             android:exported="false" />

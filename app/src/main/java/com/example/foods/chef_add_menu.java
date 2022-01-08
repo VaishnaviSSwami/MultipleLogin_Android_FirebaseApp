@@ -14,7 +14,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -27,8 +26,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class chef_add_menu extends AppCompatActivity {
     ImageView food_image;
     FloatingActionButton Btn_add_food_image;
-    EditText name_of_food,desco,quanto,prize;
-    Button btn_ADD_MENU_submit;
+    private EditText name_of_food, desco , quanto, prize;
+    private Button btn_ADD_MENU_submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,31 +42,19 @@ public class chef_add_menu extends AppCompatActivity {
         btn_ADD_MENU_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!TextUtils.isEmpty((CharSequence) name_of_food)&& !TextUtils.isEmpty((CharSequence) desco) && !TextUtils.isEmpty((CharSequence) quanto)&&!TextUtils.isEmpty((CharSequence) prize))
-                {
-                    String cheffood = name_of_food.getText().toString();
-                    String chefdesc = desco.getText().toString();
-                    String chefquant = quanto.getText().toString();
-                    String foodprize = prize.getText().toString();
-                    Intent i4 = new Intent(chef_add_menu.this,chef_view_menu.class);
+                String cheffood = name_of_food.getText().toString();
+                String chefdesc = desco.getText().toString();
+                String chefquant = quanto.getText().toString();
+                String foodprize = prize.getText().toString();
+                Intent i4 = new Intent(chef_add_menu.this,chef_view_menu.class);
 
-                    i4.putExtra("Foodkanam",cheffood);
-                    i4.putExtra("desckanam",chefdesc);
-                    i4.putExtra("quantitykanam",chefquant);
-                    i4.putExtra("pricekanam",foodprize);
-                    startActivity(i4);
-                }
-                else
-                {
-                    name_of_food.setError("Required");
-                    quanto.setError("Required");
-                    desco.setError("Required");
-                    prize.setError("Required");
-                }
-
+                i4.putExtra("Foodkanam",cheffood);
+                i4.putExtra("desckanam",chefdesc);
+                i4.putExtra("quantitykanam",chefquant);
+                i4.putExtra("pricekanam",foodprize);
+                startActivity(i4);
             }
         });
-
         Btn_add_food_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

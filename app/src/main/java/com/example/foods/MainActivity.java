@@ -11,6 +11,7 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toolbar;
@@ -59,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
                         Log.i("Menu_drawer", "Customer is selected ");
                         Intent intent=new Intent(MainActivity.this,customer_login.class);
                         startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.food_warrior:
+                        Log.i("Menu_drawer","Food warrior is selected ");
+                        Intent intent2=new Intent(MainActivity.this,delivery_person_login.class);
+                        startActivity(intent2);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.food_warrior:
                         Log.i("Menu_drawer","Food warrior is selected ");
-                        Intent intent2=new Intent(MainActivity.this,delivery_person_login.class);
-                        startActivity(intent2);
+                        Intent intent7=new Intent(MainActivity.this,delivery_person_login.class);
+                        startActivity(intent7);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

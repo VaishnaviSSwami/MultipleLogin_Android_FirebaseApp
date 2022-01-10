@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods">
         <activity
+            android:name=".delivery_person_otp_verification"
+            android:exported="false" />
+        <activity
             android:name=".delivery_person_login"
             android:exported="false" />
         <activity

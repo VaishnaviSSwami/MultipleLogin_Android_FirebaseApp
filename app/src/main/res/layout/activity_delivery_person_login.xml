@@ -4,6 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     tools:context=".delivery_person_login">
+
+    <Button
+        android:id="@+id/btn_otp"
+        android:layout_width="196dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_custom"
+        android:text="SEND OTP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/delivery_personPhone"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_custom"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="ENTER YOUR PHONE NUMBER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

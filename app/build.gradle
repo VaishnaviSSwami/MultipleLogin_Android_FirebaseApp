@@ -44,6 +44,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:23.0.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     testImplementation 'junit:junit:'
     implementation "androidx.cardview:cardview:1.0.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

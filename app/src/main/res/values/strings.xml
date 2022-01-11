@@ -22,4 +22,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="otpverification">One Time Password will be sent to you which will Activate your Belli Pathway!</string>
     <string name="enter_your_mobile_number">Enter Your Mobile Number</string>
+    <string name="title_activity_delivery_person_dashboard">delivery_person_dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

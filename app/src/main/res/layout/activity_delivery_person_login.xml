@@ -44,6 +44,7 @@
         android:textColor="#252424"
         android:textSize="26sp"
         android:maxLength="10"
+        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"

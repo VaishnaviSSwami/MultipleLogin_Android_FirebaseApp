@@ -19,8 +19,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
-        android:id="@+id/editTextNumber1"
+        android:id="@+id/otp1"
         android:layout_width="61dp"
         android:layout_height="66dp"
         android:background="#BBE3E8"
@@ -32,12 +33,11 @@
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612"
+        app:layout_constraintVertical_bias="0.608"
         tools:ignore="SpeakableTextPresentCheck" />
 
-
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/otp2"
         android:layout_width="61dp"
         android:layout_height="66dp"
         android:background="#BBE3E8"
@@ -78,7 +78,7 @@
         app:layout_constraintVertical_bias="0.366" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/otp4"
         android:layout_width="61dp"
         android:layout_height="66dp"
         android:background="#BBE3E8"
@@ -108,7 +108,7 @@
 
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/otp3"
         android:layout_width="61dp"
         android:layout_height="66dp"
         android:background="#BBE3E8"
@@ -134,7 +134,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

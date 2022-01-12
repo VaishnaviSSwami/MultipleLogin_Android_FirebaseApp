@@ -85,6 +85,7 @@
                 />
 
             <EditText
+                android:id="@+id/inputphno"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:background="@null"
@@ -104,16 +105,35 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Get OTP"
-            android:textStyle="bold"
-            android:layout_margin="30dp"
-            android:textColor="@color/black"
-            android:id="@+id/buttongetotp"
-            android:background="@drawable/backgroundbutton"
-            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get OTP"
+                android:textStyle="bold"
+                android:layout_margin="30dp"
+                android:textColor="@color/black"
+                android:id="@+id/buttongetotp"
+                android:background="@drawable/backgroundbutton"
+                />
+
+            <ProgressBar
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/pgid"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+
+
+
+        </FrameLayout>
+
+
 
 
 

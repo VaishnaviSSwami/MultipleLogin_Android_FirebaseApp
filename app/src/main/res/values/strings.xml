@@ -26,4 +26,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="please_enter_the_otp_send_on_your_number">Please Enter The OTP Send on your Number</string>
 </resources>

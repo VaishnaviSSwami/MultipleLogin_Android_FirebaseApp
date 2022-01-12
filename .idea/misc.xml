@@ -20,9 +20,8 @@
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_dashboard.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_login.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_customer_registration.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_delivery_person_dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_delivery_person_login.xml" value="0.176" />
-        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_delivery_person_otp_verification.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_delivery_person_login.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_delivery_person_otp_verification.xml" value="0.16" />
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_gallary.xml" value="0.264" />
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_gallery.xml" value="0.264" />
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -33,6 +32,7 @@
         <entry key="..\:/Users/Dell/Documents/GitHub/khanakhajana/app/src/main/res/menu/sidemenu.xml" value="0.25" />
         <entry key="..\:/Users/Samvid/Desktop/Food-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable/backgroundbox.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable/backgroundbutton.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_about_us.xml" value="0.264" />
         <entry key="..\:/Users/Samvid/Desktop/khanakhajana/app/src/main/res/layout/activity_chef_add_menu.xml" value="0.24635416666666668" />

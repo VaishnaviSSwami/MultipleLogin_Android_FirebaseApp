@@ -71,6 +71,7 @@
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
             android:orientation="horizontal"
+            android:background="@drawable/backgroundbox"
             >
 
             <TextView
@@ -94,12 +95,26 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                />
+                tools:ignore="TouchTargetSizeCheck" />
+
+
 
 
 
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get OTP"
+            android:textStyle="bold"
+            android:layout_margin="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/buttongetotp"
+            android:background="@drawable/backgroundbutton"
+            />
+
 
 
 

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.customer:
                         Log.i("Menu_drawer", "Customer is selected ");
-                        Intent intent=new Intent(MainActivity.this,customer_login.class);
+                        Intent intent=new Intent(MainActivity.this,CustomerRegistration.class);
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;

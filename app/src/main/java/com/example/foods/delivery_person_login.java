@@ -37,10 +37,10 @@ public class delivery_person_login extends AppCompatActivity {
       binding.btnOtp.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-              if (binding.phoneNo.getText().toString().trim().isEmpty());{
+              if (binding.phoneNo.getText().toString().trim().isEmpty()){
                   Toast.makeText(delivery_person_login.this, "Invalid Phone No.", Toast.LENGTH_SHORT).show();
               }if (binding.phoneNo.getText().toString().trim().length() !=10){
-                  Toast.makeText(delivery_person_login.this, "Enter Valid OTP", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(delivery_person_login.this, "Enter Valid Phone no.", Toast.LENGTH_SHORT).show();
               }
               else{
                   otpsend();
@@ -70,6 +70,7 @@ public class delivery_person_login extends AppCompatActivity {
                                 @NonNull PhoneAuthProvider.ForceResendingToken token){
              binding.progressBarSendingOtp.setVisibility(View.GONE);
              binding.btnOtp.setVisibility(View.VISIBLE);
+             Toast.makeText(delivery_person_login.this, "OTP Sent Successfully", Toast.LENGTH_SHORT).show();
              Intent intent =new Intent(delivery_person_login.this,delivery_person_otp_verification.class);
              intent.putExtra("mobile",binding.phoneNo.getText().toString().trim());
              intent.putExtra("VerificationId",VerificationId);

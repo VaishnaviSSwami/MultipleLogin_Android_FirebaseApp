@@ -3,6 +3,7 @@ package com.example.foods;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,80 +12,77 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.foods.databinding.ActivityDeliveryPersonLoginBinding;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
 public class delivery_person_login extends AppCompatActivity {
-    EditText phone_no;
-    Button btn_otp;
-    ProgressBar progressBar_sending_otp;
+    private ActivityDeliveryPersonLoginBinding binding;
+    private FirebaseAuth mAuth;
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery_person_login);
-        Button btn_otp;
-        btn_otp=findViewById(R.id.btn_otp);
-        progressBar_sending_otp =findViewById(R.id.progressBar_sending_otp);
-        btn_otp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               if(!phone_no.getText().toString().trim().isEmpty()){
-                   if((phone_no.getText().toString().trim()).length()==10){
+        binding = ActivityDeliveryPersonLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        mAuth = FirebaseAuth.getInstance();
 
-                       progressBar_sending_otp.setVisibility(View.VISIBLE);
-                       btn_otp.setVisibility(View.INVISIBLE);
+      binding.btnOtp.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              if (binding.phoneNo.getText().toString().trim().isEmpty());{
+                  Toast.makeText(delivery_person_login.this, "Invalid Phone No.", Toast.LENGTH_SHORT).show();
+              }if (binding.phoneNo.getText().toString().trim().length() !=10){
+                  Toast.makeText(delivery_person_login.this, "Enter Valid OTP", Toast.LENGTH_SHORT).show();
+              }
+              else{
+                  otpsend();
+              }
+          }
+      });
+    }
 
-                       PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                               "+91" + phone_no.getText().toString(),
-                               10,
-                               TimeUnit.SECONDS,
-                               delivery_person_login.this,
-                               new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                                   @Override
-                                   public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+    private void otpsend() {
+        binding.progressBarSendingOtp.setVisibility(View.VISIBLE);
+        binding.btnOtp.setVisibility(View.INVISIBLE);
 
-                                       progressBar_sending_otp.setVisibility(View.GONE);
-                                       btn_otp.setVisibility(View.VISIBLE);
-                                   }
+     mCallback= new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+         @Override
+         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
 
-                                   @Override
-                                   public void onVerificationFailed(@NonNull FirebaseException e) {
-                                       progressBar_sending_otp.setVisibility(View.GONE);
-                                       btn_otp.setVisibility(View.VISIBLE);
-                                       Toast.makeText(delivery_person_login.this, "Please check Your Internet Connection", Toast.LENGTH_SHORT).show();
+         }
 
-                                   }
-
-                                   @Override
-                                   public void onCodeSent(@NonNull String databse_otp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                       progressBar_sending_otp.setVisibility(View.GONE);
-                                       btn_otp.setVisibility(View.VISIBLE);
-                                       Intent i=new Intent(getApplicationContext(),delivery_person_otp_verification.class);
-                                       getIntent().putExtra("mobile",phone_no.getText().toString());
-                                       getIntent().putExtra("databse_otp",databse_otp);
-                                       startActivity(i);
-                                   }
-                               }
-                       );
-                     /*  Intent i=new Intent(getApplicationContext(),delivery_person_otp_verification.class);
-                       getIntent().putExtra("mobile",phone_no.getText().toString());
-                       startActivity(i);*/
-                       Toast.makeText(delivery_person_login.this, "OTP SENT SUCCESSFULLY", Toast.LENGTH_SHORT).show();
-                   }
-                   else{
-                       Toast.makeText(delivery_person_login.this, "PLEASE ENTER CORRECT MOBILE NUMBER", Toast.LENGTH_SHORT).show();
-                   }
-               }
-               else{
-                   Toast.makeText(delivery_person_login.this, "PLEASE ENTER THE PHONE NUMBER", Toast.LENGTH_SHORT).show();
-               }
-            }
-        });
-
-
+         @Override
+         public void onVerificationFailed(@NonNull FirebaseException e) {
+          binding.progressBarSendingOtp.setVisibility(View.GONE);
+          binding.btnOtp.setVisibility(View.VISIBLE);
+             Toast.makeText(delivery_person_login.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+         }
+         @Override
+         public void onCodeSent(@NonNull String VerificationId,
+                                @NonNull PhoneAuthProvider.ForceResendingToken token){
+             binding.progressBarSendingOtp.setVisibility(View.GONE);
+             binding.btnOtp.setVisibility(View.VISIBLE);
+             Intent intent =new Intent(delivery_person_login.this,delivery_person_otp_verification.class);
+             intent.putExtra("mobile",binding.phoneNo.getText().toString().trim());
+             intent.putExtra("VerificationId",VerificationId);
+             startActivity(intent);
+         }
+     };
+        PhoneAuthOptions options =
+                PhoneAuthOptions.newBuilder(mAuth)
+                .setPhoneNumber("+91" + binding.phoneNo.getText().toString().trim())
+                .setTimeout(10L, TimeUnit.SECONDS)
+                .setActivity(this)
+                .setCallbacks(mCallback)
+                .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
     }
 }

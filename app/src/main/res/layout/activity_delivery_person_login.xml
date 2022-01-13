@@ -41,16 +41,15 @@
         android:background="#ffff"
         android:gravity="center"
         android:hint="xxxxxxxxxx"
+        android:inputType="phone"
+        android:maxLength="10"
         android:textColor="#252424"
         android:textSize="26sp"
-        android:maxLength="10"
-        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_bias="0.792"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/country_code"
@@ -63,7 +62,7 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -14,7 +14,7 @@ import com.example.foods.databinding.ActivityDeliveryPersonDashboardBinding;
 
 public class delivery_person_dashboard extends AppCompatActivity {
 
-    private ActivityDeliveryPersonDashboardBinding binding;
+     ActivityDeliveryPersonDashboardBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

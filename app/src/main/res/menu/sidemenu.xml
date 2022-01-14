@@ -2,21 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/chef"
-            android:icon="@drawable/ic_baseline_fastfood_24"
-            android:title="@string/chef_str_res" />
+
 
         <item
             android:id="@+id/customer"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/customer_str_res" />
         <item
-            android:id="@+id/food_warrior"
-            android:icon="@drawable/ic_baseline_run_circle_24"
-            android:title="Food warrior"/>
-
-
+            android:id="@+id/chef"
+            android:icon="@drawable/ic_baseline_fastfood_24"
+            android:title="@string/chef_str_res" />
         <item
             android:id="@+id/about"
             android:icon="@drawable/ic_baseline_contact_mail_24"

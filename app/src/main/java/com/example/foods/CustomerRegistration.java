@@ -2,93 +2,177 @@ package com.example.foods;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.foods.databinding.ActivityCustomerRegistrationBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class CustomerRegistration extends AppCompatActivity {
-    EditText phone_no;
-    Button btn_otp;
-    ProgressBar pao;
+    private ActivityCustomerRegistrationBinding binding;
+    private String VerificationId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_registration);
-        phone_no = findViewById(R.id.inputphno);
-        btn_otp=findViewById(R.id.buttongetotp);
-        pao =findViewById(R.id.pgid);
-        btn_otp.setOnClickListener(new View.OnClickListener() {
+        binding = ActivityCustomerRegistrationBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        otpinput();
+
+        binding.phoneNoShowOtp.setText(String.format(
+                "+91-%s",getIntent().getStringExtra("mobile")
+        ));
+
+        VerificationId = getIntent().getStringExtra("VerificationId");
+
+        binding.resendOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!phone_no.getText().toString().trim().isEmpty()){
-                    if((phone_no.getText().toString().trim()).length()==10){
-
-                        pao.setVisibility(View.VISIBLE);
-                        btn_otp.setVisibility(View.INVISIBLE);
-
-                        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                                "+91" + phone_no.getText().toString(),
-                                10,
-                                TimeUnit.SECONDS,
-                                CustomerRegistration.this,
-
-                                new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                                    @Override
-                                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-
-                                        pao.setVisibility(View.GONE);
-                                        btn_otp.setVisibility(View.VISIBLE);
-                                    }
-
-                                    @Override
-                                    public void onVerificationFailed(@NonNull FirebaseException e) {
-                                        pao.setVisibility(View.GONE);
-                                        btn_otp.setVisibility(View.VISIBLE);
-                                        Toast.makeText(CustomerRegistration.this, "Please check Your Internet Connection", Toast.LENGTH_SHORT).show();
-
-                                    }
-
-                                    @Override
-                                    public void onCodeSent(@NonNull String databse_otp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                        pao.setVisibility(View.GONE);
-                                        btn_otp.setVisibility(View.VISIBLE);
-                                        Intent i=new Intent(getApplicationContext(),customer_login.class);
-                                        getIntent().putExtra("mobile",phone_no.getText().toString());
-                                        getIntent().putExtra("databse_otp",databse_otp);
-                                        startActivity(i);
-                                    }
-                                }
-                        );
-
-                     /*  Intent i=new Intent(getApplicationContext(),customer_login.class);
-                       getIntent().putExtra("mobile",phone_no.getText().toString());
-                       startActivity(i);*/
-
-                        Toast.makeText(CustomerRegistration.this, "OTP SENT SUCCESSFULLY", Toast.LENGTH_SHORT).show();
-                    }
-                    else{
-                        Toast.makeText(CustomerRegistration.this, "PLEASE ENTER CORRECT MOBILE NUMBER", Toast.LENGTH_SHORT).show();
-                    }
+                Toast.makeText(CustomerRegistration.this, "OTP Send Successfully", Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.btnOtpSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.progressBarVerifyOtp.setVisibility(View.VISIBLE);
+                binding.btnOtpSubmit.setVisibility(View.INVISIBLE);
+                if (binding.otp1.getText().toString().trim().isEmpty() ||
+                        binding.otp2.getText().toString().trim().isEmpty() ||
+                        binding.otp3.getText().toString().trim().isEmpty() ||
+                        binding.otp4.getText().toString().trim().isEmpty() ||
+                        binding.otp5.getText().toString().trim().isEmpty() ||
+                        binding.otp6.getText().toString().trim().isEmpty()){
+                    Toast.makeText(CustomerRegistration.this, "OTP is Not Valid", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(CustomerRegistration.this, "PLEASE ENTER THE PHONE NUMBER", Toast.LENGTH_SHORT).show();
+                    if (VerificationId != null){
+                        String code = binding.otp1.getText().toString().trim() +
+                                binding.otp2.getText().toString().trim() +
+                                binding.otp3.getText().toString().trim() +
+                                binding.otp4.getText().toString().trim() +
+                                binding.otp5.getText().toString().trim() +
+                                binding.otp6.getText().toString().trim();
+                        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(VerificationId,code);
+                        FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()){
+                                    binding.progressBarVerifyOtp.setVisibility(View.VISIBLE);
+                                    binding.btnOtpSubmit.setVisibility(View.INVISIBLE);
+                                    Toast.makeText(CustomerRegistration.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent =new Intent(CustomerRegistration.this,customer_dashboard.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                }else{
+                                    binding.progressBarVerifyOtp.setVisibility(View.GONE);
+                                    binding.btnOtpSubmit.setVisibility(View.VISIBLE);
+                                    Toast.makeText(CustomerRegistration.this, "OTP Is Not Valid", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
                 }
             }
         });
+    }
 
+    private void otpinput() {
+        binding.otp1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.otp2.requestFocus();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        binding.otp2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.otp3.requestFocus();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        binding.otp3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.otp4.requestFocus();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        binding.otp4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.otp5.requestFocus();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        binding.otp5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.otp6.requestFocus();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 }

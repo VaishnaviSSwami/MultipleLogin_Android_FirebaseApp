@@ -49,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+
+
+                    case R.id.customer:
+                        Log.i("Menu_drawer", "Customer is selected ");
+                        Intent intent=new Intent(MainActivity.this,customer_login.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
                     case R.id.chef:
                         Log.i("Menu_drawer", "Chef is selected ");
                         Intent i=new Intent(MainActivity.this,Chef_Login.class);
@@ -56,19 +65,6 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.customer:
-                        Log.i("Menu_drawer", "Customer is selected ");
-                        Intent intent=new Intent(MainActivity.this,CustomerRegistration.class);
-                        startActivity(intent);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.food_warrior:
-                        Log.i("Menu_drawer","Food warrior is selected ");
-                        Intent intent7=new Intent(MainActivity.this,delivery_person_login.class);
-                        startActivity(intent7);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
 
                     case R.id.about:
                         Log.i("Menu_drawer", "About is selected ");
